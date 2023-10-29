@@ -11,7 +11,5 @@ export class UserRoutes {
 
     private config(): void {
         this.router.get('/', this.userController.getAllUsers);
-        this.router.post('/payments', this.userController.payment);
-        this.router.get('/notifications', this.userController.notification);
     }
 }

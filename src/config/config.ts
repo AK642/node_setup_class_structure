@@ -1,5 +1,5 @@
 import { Dialect } from 'sequelize';
-import env from '../utils/validateEnv';
+import env from '../utils/validate-env';
 
 interface dbConfig {
     [key: string]: {
@@ -15,21 +15,21 @@ export const config: dbConfig = {
     development: {
         username: env.MYSQL_USER,
         password: env.MYSQL_PASSWORD,
-        database: "gsm_development",
+        database: "machine_on_rent_dev",
         host: env.MYSQL_HOST,
         dialect: 'mysql'
     },
     staging: {
         username: env.MYSQL_USER,
         password: env.MYSQL_PASSWORD,
-        database: "gsm_staging",
+        database: "machine_on_rent_stag",
         host: env.MYSQL_HOST,
         dialect: 'mysql'
     },
     production: {
         username: env.MYSQL_USER,
         password: env.MYSQL_PASSWORD,
-        database: "gsm_production",
+        database: "machine_on_rent_prod",
         host: env.MYSQL_HOST,
         dialect: 'mysql'
     }
